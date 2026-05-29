@@ -15,6 +15,10 @@
       "type": "string",
       "minLength": 1
     },
+    "nome_curto": {
+      "type": "string",
+      "minLength": 1
+    },
     "foto_url": {
       "type": "string",
       "format": "uri"

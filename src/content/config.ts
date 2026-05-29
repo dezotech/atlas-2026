@@ -54,6 +54,7 @@ const candidatos = defineCollection({
     id: z.string().min(1),
     slug: z.string().regex(/^[a-z0-9-]+$/),
     nome: z.string().min(1),
+    nome_curto: z.string().min(1).optional(),
     foto_url: z.string().url().optional(),
     partido: z.string().min(1),
     biografia_minima: z.string().min(10).max(500),

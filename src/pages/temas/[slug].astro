@@ -76,7 +76,7 @@ const description = `${tema.data.nome} — ${declaracoes.length} declarações d
             return (
               <DeficitTema
                 deficit={d}
-                nomeCandidato={cand?.data.nome ?? d.candidato_id}
+                nomeCandidato={cand?.data.nome_curto ?? cand?.data.nome ?? d.candidato_id}
                 nomeTema={tema.data.nome}
               />
             );
