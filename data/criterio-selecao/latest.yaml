@@ -113,4 +113,16 @@ linha_de_empate:
   desempate_aplicado: false
   desempate_criterio: null
 
-versao: 1
+deficits_estruturais:
+  - candidato_id: "bolsonaro-flavio"
+    tema: "educacao"
+    declaracoes_encontradas: 0
+    justificativa: "Não foi localizada fala de primeira pessoa do pré-candidato sobre educação dentro da janela, em fonte acessível; o material temático próprio disponível é de 2024 (fora da janela)."
+    data_verificacao: "2026-05-28"
+  - candidato_id: "bolsonaro-flavio"
+    tema: "saude"
+    declaracoes_encontradas: 0
+    justificativa: "O plano de saúde do pré-candidato é descrito por terceiros; a única citação direta localizada pertence ao ex-ministro Queiroga, não a Flávio. A lacuna foi registrada em vez de atribuir a fala de outra pessoa ao candidato."
+    data_verificacao: "2026-05-28"
+
+versao: 2

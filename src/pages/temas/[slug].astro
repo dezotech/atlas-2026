@@ -2,9 +2,11 @@
 import BaseLayout from "@/components/layout/BaseLayout.astro";
 import SEOTags from "@/components/seo/SEOTags.astro";
 import DeclaracaoCard from "@/components/declaracao/DeclaracaoCard.astro";
-import { getCollection } from "astro:content";
+import DeficitTema from "@/components/tema/DeficitTema.astro";
+import { getCollection, getEntry } from "astro:content";
 import { getDeclaracoesByTema } from "@/lib/data/declaracoes";
 import { getAllCandidatos } from "@/lib/data/candidatos";
+import { getDeficitsByTema } from "@/lib/data/criterio";
 import type { Candidato, Tema } from "@/types";
 
 export async function getStaticPaths() {
@@ -24,6 +26,8 @@ const declaracoes = await getDeclaracoesByTema(tema.data.slug);
 const candidatos = await getAllCandidatos();
 // DeclaracaoCard resolve o candidato por d.data.candidato_id, que é o SLUG → chavear por slug.
 const candidatosPorSlug = new Map(candidatos.map((c: Candidato) => [c.data.slug, c]));
+const criterio = await getEntry("criterioSelecao", "latest");
+const deficits = getDeficitsByTema(criterio?.data.deficits_estruturais ?? [], tema.data.slug);
 const canonical = new URL(`/temas/${tema.data.slug}`, Astro.site).toString();
 const description = `${tema.data.nome} — ${declaracoes.length} declarações documentadas no Atlas. ${tema.data.descricao_curta}`;
 ---
@@ -59,6 +63,23 @@ const description = `${tema.data.nome} — ${declaracoes.length} declarações d
           {declaracoes.map((d) => {
             const cand = candidatosPorSlug.get(d.data.candidato_id);
             return <DeclaracaoCard declaracao={d} {...(cand ? { candidato: cand } : {})} />;
+          })}
+        </div>
+      )
+    }
+
+    {
+      deficits.length > 0 && (
+        <div style="margin-top: var(--space-2xl);">
+          {deficits.map((d) => {
+            const cand = candidatosPorSlug.get(d.candidato_id);
+            return (
+              <DeficitTema
+                deficit={d}
+                nomeCandidato={cand?.data.nome ?? d.candidato_id}
+                nomeTema={tema.data.nome}
+              />
+            );
           })}
         </div>
       )

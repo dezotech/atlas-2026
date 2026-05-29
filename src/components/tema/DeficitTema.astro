@@ -1,0 +1,59 @@
+---
+import type { DeficitEstrutural } from "@/types";
+import { formatDateBR } from "@/lib/utils/format-date";
+
+interface Props {
+  deficit: DeficitEstrutural;
+  nomeCandidato: string;
+  nomeTema: string;
+}
+
+const { deficit, nomeCandidato, nomeTema } = Astro.props;
+---
+
+<section class="deficit-tema" aria-label={`Cobertura de ${nomeCandidato} em ${nomeTema}`}>
+  <p class="deficit-tema__titulo">
+    Sem declaração de <strong>{nomeCandidato}</strong> documentada em {nomeTema.toLowerCase()} no Atlas.
+  </p>
+  <p class="deficit-tema__texto">
+    Dentro do critério editorial vigente, não foi localizada declaração de primeira pessoa do
+    pré-candidato neste tema em fonte acessível. {deficit.justificativa} A cota não foi preenchida artificialmente.
+  </p>
+  <p class="deficit-tema__rodape">
+    <a href="/metodologia">Ver Metodologia →</a>
+    <time datetime={deficit.data_verificacao}
+      >verificado em {formatDateBR(deficit.data_verificacao)}</time
+    >
+  </p>
+</section>
+
+<style>
+  .deficit-tema {
+    margin-block: var(--space-md);
+    padding: var(--space-lg);
+    border-left: 4px solid var(--color-hairline-strong);
+    background: var(--color-canvas-soft);
+  }
+  .deficit-tema__titulo {
+    font-size: var(--text-body-md);
+    margin-block: 0 var(--space-xs);
+    color: var(--color-text-body);
+  }
+  .deficit-tema__texto {
+    font-size: var(--text-body-sm);
+    line-height: var(--leading-body);
+    color: var(--color-text-mute);
+    margin-block: 0 var(--space-sm);
+  }
+  .deficit-tema__rodape {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: baseline;
+    font-size: var(--text-caption);
+    margin-block: 0;
+  }
+  .deficit-tema__rodape time {
+    color: var(--color-text-mute);
+  }
+</style>

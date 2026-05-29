@@ -207,6 +207,17 @@ const criterioSelecaoSchema = z.object({
     desempate_criterio: z.enum(["maior amostra", "menor margem", "tempo no cargo"]).nullable(),
   }),
   versao: z.number().int().positive(),
+  deficits_estruturais: z
+    .array(
+      z.object({
+        candidato_id: z.string().regex(/^[a-z0-9-]+$/),
+        tema: z.string().min(1),
+        declaracoes_encontradas: z.number().int().min(0),
+        justificativa: z.string().min(1),
+        data_verificacao: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+      }),
+    )
+    .default([]),
 });
 
 const outDir = join(process.cwd(), "data", "schemas");

@@ -44,17 +44,15 @@ deficits_estruturais:
 Schema Zod 3 (em `src/content/config.ts` — constraint do projeto: `astro:content` re-exporta Zod 3):
 
 ```ts
-deficits_estruturais: z
-  .array(
-    z.object({
-      candidato_id: z.string().regex(/^[a-z0-9-]+$/),
-      tema: z.string().min(1),
-      declaracoes_encontradas: z.number().int().min(0),
-      justificativa: z.string().min(1),
-      data_verificacao: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-    }),
-  )
-  .default([])
+deficits_estruturais: z.array(
+  z.object({
+    candidato_id: z.string().regex(/^[a-z0-9-]+$/),
+    tema: z.string().min(1),
+    declaracoes_encontradas: z.number().int().min(0),
+    justificativa: z.string().min(1),
+    data_verificacao: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  }),
+).default([]);
 ```
 
 - `candidato_id` e `tema` são FKs por slug (candidatos / temas). Validação de integridade fica a cargo de audit/uso, não do schema (consistente com o resto do projeto).

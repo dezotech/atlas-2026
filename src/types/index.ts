@@ -36,3 +36,11 @@ export type EventoTipo =
   | "post_rede_social"
   | "sabatina"
   | "declaracao_oficial";
+
+export interface DeficitEstrutural {
+  candidato_id: string;
+  tema: string;
+  declaracoes_encontradas: number;
+  justificativa: string;
+  data_verificacao: string;
+}
