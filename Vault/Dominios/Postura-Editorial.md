@@ -1,7 +1,7 @@
 ---
 tags: [dominio, editorial, postura]
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 status: ativo
 dependencies: [[Sem-Veredito-Proprio]]
 ---
@@ -29,6 +29,10 @@ dependencies: [[Sem-Veredito-Proprio]]
 - Quando há divergência entre fontes: registrar todas, sem peso editorial
 - Quando não há veredito: dizer explicitamente "sem veredito de fact-checker reconhecido até <data>"
 - Erratas públicas em `/errata`, datadas, com diff visível em git (processo materializado na página, sem decisão dedicada em `Vault/Decisoes/`)
+
+## Relação com a AI Policy (2026-05-29)
+
+A postura neutra e o **sem veredito próprio** são **mantidos** sob a AI Policy "O Processo é a Autoridade": a IA pode operar o pipeline e sintetizar (camadas C1/C2 rotuladas e ancoradas em fatos C0), mas **nunca** emite juízo de veracidade — **síntese sim, juízo não**. A credibilidade vem do método público (rastreável, verificável, repetível, documentado), não da restrição "AI não gera conteúdo" (superada). Ver [[Decisoes/AI-Policy-Processo-Reproduzivel]].
 
 ## Links
 

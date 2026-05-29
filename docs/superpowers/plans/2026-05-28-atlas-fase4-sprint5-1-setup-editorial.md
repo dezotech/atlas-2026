@@ -2580,7 +2580,8 @@ const linhaEmpate = criterio?.data.linha_de_empate;
         </li>
       </ul>
       <p>
-        Esta política está alinhada à TSE Res. 23.732/2024 sobre uso de IA em conteúdo eleitoral.
+        Esta política está alinhada à Res. TSE nº 23.610/2019, art. 9º-B (redação dada pela Res. nº
+        23.755/2026), sobre uso de IA em conteúdo eleitoral.
       </p>
     </section>
 
@@ -2643,7 +2644,7 @@ Documenta critério público de:
 4. Cascata de saliência em 5 níveis determinísticos
 5. Fontes primárias com Wayback obrigatório
 6. Política de não emitir veredito próprio
-7. Disclosure de uso de IA (TSE Res. 23.732/2024)
+7. Disclosure de uso de IA (TSE Res. 23.610/2019 art. 9º-B, red. 23.755/2026)
 8. Auditabilidade total via GitHub + Errata
 
 Página lê data/criterio-selecao/latest.yaml dinamicamente via getEntry().

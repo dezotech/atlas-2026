@@ -159,6 +159,8 @@ Quando o universo de declarações elegíveis num tema for > 5, aplicamos esta *
 
 ### 5.1 Princípio operacional inviolável
 
+> ⚠️ **Atualizado em 2026-05-29 — política substituída.** O princípio "AI não gera conteúdo" abaixo foi **superado** pela nova AI Policy "O Processo é a Autoridade" (síntese-sim / juízo-não; camadas C0/C1/C2). Fonte de verdade: `docs/superpowers/specs/2026-05-29-atlas-ai-policy-design.md` §2.1 + §3 e `Vault/Decisoes/AI-Policy-Processo-Reproduzivel.md`. O texto original é mantido como registro histórico. A reescrita da narrativa pública de `/metodologia` e a produção sob a nova política dependem de **parecer jurídico eleitoral** (gate pendente).
+
 Do spec mestre §7.1: **"AI não gera conteúdo."** Whisper só faz transcrição bruta; toda transcrição é revisada por humano antes de virar `texto` da declaração.
 
 Aplicado à Fase 4: **nenhuma declaração publicada terá `texto`, `contexto` ou `contexto_adicional` escrito pelo Claude sem revisão humana explícita.** Claude preenche campos derivados (`id`, `slug`, `criado_em`, `versao`), prepara a estrutura, propõe `tema_principal`/`tipo_estrutural` para validação, mas o **conteúdo editorial** sempre passa por André.
@@ -222,7 +224,7 @@ Texto que deve aparecer literalmente em `/metodologia` v1:
 > - **Estruturação de dados:** assistente IA preenche campos derivados (IDs, slugs, timestamps) seguindo schemas fixos.
 > - **O que NÃO fazemos:** geração automática de `texto`, `contexto`, `contexto_adicional` ou qualquer campo de conteúdo editorial; resumo automático de declarações; classificação automática de "veracidade" (não emitimos vereditos).
 >
-> Esta política está alinhada à TSE Res. 23.732/2024 sobre uso de IA em conteúdo eleitoral.
+> Esta política está alinhada à Res. TSE nº 23.610/2019, art. 9º-B (redação dada pela Res. nº 23.755/2026), sobre uso de IA em conteúdo eleitoral.
 
 ### 5.5 Checklist humano de sign-off (registro em `log-editorial.csv`)
 
@@ -727,7 +729,7 @@ Estas restrições permanecem ativas na Fase 4. Documentadas aqui para evitar re
 - Estadão Verifica (fact-checker): https://www.estadao.com.br/estadao-verifica/
 - TSE — repositório de candidaturas: https://divulgacandcontas.tse.jus.br/
 - Wayback Machine Save Page Now: https://web.archive.org/save/
-- TSE Res. 23.732/2024 (IA em campanhas): https://www.tse.jus.br/legislacao/codigo-eleitoral/resolucoes
+- TSE Res. nº 23.610/2019, art. 9º-B (red. 23.755/2026, IA em campanhas): https://www.tse.jus.br/legislacao/compilada/res/2019/resolucao-no-23-610-de-18-de-dezembro-de-2019
 
 ---
 

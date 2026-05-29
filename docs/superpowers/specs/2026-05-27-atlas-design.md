@@ -290,6 +290,8 @@ Bem abaixo do teto de R$ 2k/mês.
 
 ### 7.1 Princípios da ingestão
 
+> ⚠️ **Atualizado em 2026-05-29 — política substituída.** O princípio "AI não gera conteúdo" abaixo foi **superado** pela nova AI Policy "O Processo é a Autoridade" (síntese-sim / juízo-não; camadas C0/C1/C2). Fonte de verdade: `docs/superpowers/specs/2026-05-29-atlas-ai-policy-design.md` §2.1 e `Vault/Decisoes/AI-Policy-Processo-Reproduzivel.md`. O texto original é mantido como registro histórico. A publicação sob a nova política depende de **parecer jurídico eleitoral** (gate pendente).
+
 - **AI não gera conteúdo.** AI só ajuda em: transcrição bruta (Whisper), sugestão de tags estruturais, busca semântica (post-MVP).
 - **Toda transcrição é revisada por você** antes de virar declaração publicada.
 - **Wayback Machine é obrigatório** em cada item — sem exceção.
@@ -474,17 +476,17 @@ Astro estático entrega isso na configuração padrão. Não negociar para baixo
 
 ## 13. Riscos e Mitigações
 
-| Risco                                | Severidade  | Probabilidade | Mitigação                                                                                             |
-| ------------------------------------ | ----------- | ------------- | ----------------------------------------------------------------------------------------------------- |
-| Acusação de viés político            | Média       | Alta          | Código + dataset abertos · log de edições público · paridade rígida de critério                       |
-| Processo por difamação               | Baixa-Média | Baixa         | Zero veredito próprio · agregamos vereditos externos com atribuição clara                             |
-| TSE Res. 23.732/2024 (IA generativa) | Baixa       | Baixa         | Não usamos IA generativa para conteúdo · só transcrição (Whisper) · disclosure público na metodologia |
-| LGPD                                 | Baixa       | Baixa         | Políticos públicos em contexto público (Art. 7 §III LGPD) · privacy policy explícita                  |
-| Scraping cinzento (X/IG/FB)          | Média       | Alta          | Wayback como fallback obrigatório · manual quando não escala · respeitar robots.txt                   |
-| Remoção/edição de fonte primária     | Alta        | Quase certa   | Snapshot interno + Wayback API obrigatórios em cada item                                              |
-| Burnout do solo founder              | Média       | Média         | Cobertura limitada (2 cand.) · workflow definido · gates de parada honestos                           |
-| Erro factual descoberto no Atlas     | Alta        | Quase certa   | Auditoria via git · processo público de correção · página de errata visível                           |
-| Confundir Atlas com fact-checker     | Alta        | Alta          | Disclaimer prominente em TODA página · FAQ clara · metodologia destacada                              |
+| Risco                                             | Severidade  | Probabilidade | Mitigação                                                                                             |
+| ------------------------------------------------- | ----------- | ------------- | ----------------------------------------------------------------------------------------------------- |
+| Acusação de viés político                         | Média       | Alta          | Código + dataset abertos · log de edições público · paridade rígida de critério                       |
+| Processo por difamação                            | Baixa-Média | Baixa         | Zero veredito próprio · agregamos vereditos externos com atribuição clara                             |
+| TSE Res. 23.610/2019 art. 9º-B (red. 23.755/2026) | Baixa       | Baixa         | Não usamos IA generativa para conteúdo · só transcrição (Whisper) · disclosure público na metodologia |
+| LGPD                                              | Baixa       | Baixa         | Políticos públicos em contexto público (Art. 7 §III LGPD) · privacy policy explícita                  |
+| Scraping cinzento (X/IG/FB)                       | Média       | Alta          | Wayback como fallback obrigatório · manual quando não escala · respeitar robots.txt                   |
+| Remoção/edição de fonte primária                  | Alta        | Quase certa   | Snapshot interno + Wayback API obrigatórios em cada item                                              |
+| Burnout do solo founder                           | Média       | Média         | Cobertura limitada (2 cand.) · workflow definido · gates de parada honestos                           |
+| Erro factual descoberto no Atlas                  | Alta        | Quase certa   | Auditoria via git · processo público de correção · página de errata visível                           |
+| Confundir Atlas com fact-checker                  | Alta        | Alta          | Disclaimer prominente em TODA página · FAQ clara · metodologia destacada                              |
 
 ---
 
@@ -640,7 +642,7 @@ Pós-T+6 meses, quando dataset tiver cobertura razoável (400+ declarações):
 - **Estadão Verifica** — https://www.estadao.com.br/estadao-verifica/
 - **Agência Pública** — https://apublica.org/
 - **TSE** — https://www.tse.jus.br/
-- **Resolução TSE 23.732/2024** — sobre IA generativa em eleições
+- **Resolução TSE nº 23.610/2019, art. 9º-B** (red. Res. 23.755/2026) — sobre IA em eleições
 - **LGPD (Lei 13.709/2018)** — Art. 7º §III sobre dados de figuras públicas
 - **Internet Archive Save Page Now** — https://web.archive.org/save/
 - **Zenodo (DOI service)** — https://zenodo.org/
