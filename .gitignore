@@ -68,3 +68,6 @@ Vault/.obsidian/
 docs/audit-fase4.md
 docs/distribuicao-fase4.md
 docs/lighthouse-*.json
+
+# Artefatos de inspeção visual (Playwright MCP)
+.playwright-mcp/
